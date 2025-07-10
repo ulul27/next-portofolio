@@ -1,98 +1,42 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section d-flex align-items-center" style={{ minHeight: '100vh', background: '#fff', paddingTop: '100px' }}>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
-            <div className={`${isVisible ? 'fade-in-up' : ''}`}>
-              <h1 className="display-4 fw-bold mb-4">
-                Halo, Saya <span className="text-warning">Developer</span>
-              </h1>
-              <p className="lead mb-4">
-                Saya adalah seorang Full Stack Developer yang passionate dalam menciptakan 
-                aplikasi web dan mobile yang inovatif dan user-friendly. 
-                Berpengalaman dalam React, Node.js, dan berbagai teknologi modern.
+          {/* Left: Text */}
+          <div className="col-lg-6 mb-5 mb-lg-0">
+            <div>
+              <h6 className="fw-bold mb-2" style={{ color: '#ff5e5e', fontSize: '1.1rem' }}>Hi There, I'm Fofana</h6>
+              <h1 className="display-3 fw-bold mb-3" style={{ color: '#222', lineHeight: 1.1 }}>Full Stack<br />Developer</h1>
+              <p className="lead text-muted mb-4" style={{ maxWidth: 480 }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa voluptate incidunt nesciunt vero, commodi explicabo rem enim blanditiis debitis excepturi sapiente.
               </p>
-              <div className="d-flex flex-wrap gap-3">
-                <button 
-                  className="btn btn-warning btn-lg btn-custom"
-                  onClick={() => scrollToSection('projects')}
-                >
-                  <i className="fas fa-eye me-2"></i>
-                  Lihat Proyek
-                </button>
-                <button 
-                  className="btn btn-outline-light btn-lg btn-custom"
-                  onClick={() => scrollToSection('contact')}
-                >
-                  <i className="fas fa-envelope me-2"></i>
-                  Hubungi Saya
-                </button>
+              <div className="d-flex gap-3">
+                <a href="#contact" className="btn btn-danger px-4 py-2 fw-semibold rounded-pill shadow-sm" style={{ background: '#ff5e5e', border: 'none', fontSize: '1rem' }}>Learn More</a>
+                <a href="#projects" className="btn btn-outline-dark px-4 py-2 fw-semibold rounded-pill shadow-sm" style={{ fontSize: '1rem', borderWidth: 2 }}>See our work</a>
               </div>
             </div>
           </div>
-          <div className="col-lg-6 text-center">
-            <div className={`${isVisible ? 'fade-in' : ''}`} style={{ animationDelay: '0.3s' }}>
-              <div className="position-relative">
-                <div className="bg-warning rounded-circle d-inline-block p-4 mb-3">
-                  <i className="fas fa-code text-white" style={{ fontSize: '4rem' }}></i>
-                </div>
-                <div className="position-absolute top-0 start-100 translate-middle">
-                  <div className="bg-primary rounded-circle p-2">
-                    <i className="fas fa-mobile-alt text-white"></i>
-                  </div>
-                </div>
-                <div className="position-absolute bottom-0 start-0 translate-middle">
-                  <div className="bg-success rounded-circle p-2">
-                    <i className="fas fa-palette text-white"></i>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4">
-                <div className="row text-center">
-                  <div className="col-4">
-                    <h4 className="fw-bold">5+</h4>
-                    <small>Tahun Pengalaman</small>
-                  </div>
-                  <div className="col-4">
-                    <h4 className="fw-bold">50+</h4>
-                    <small>Proyek Selesai</small>
-                  </div>
-                  <div className="col-4">
-                    <h4 className="fw-bold">30+</h4>
-                    <small>Klien Puas</small>
-                  </div>
-                </div>
-              </div>
+          {/* Right: Photo */}
+          <div className="col-lg-6 text-center position-relative">
+            <div className="d-inline-block position-relative" style={{ zIndex: 1 }}>
+              <img
+                src="/images/profile-placeholder.png"
+                alt="Profile"
+                className="img-fluid rounded-4 shadow-lg"
+                style={{ width: 300, height: 340, objectFit: 'cover', background: '#eee' }}
+              />
+              {/* Accent background */}
+              <svg width="340" height="340" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', top: -20, left: -20, zIndex: -1 }}>
+                <circle cx="170" cy="170" r="160" stroke="#ff5e5e" strokeWidth="2" fill="none" />
+                <circle cx="170" cy="170" r="120" stroke="#ff5e5e" strokeWidth="1" fill="none" />
+                <line x1="170" y1="10" x2="170" y2="330" stroke="#ff5e5e" strokeWidth="1" />
+                <line x1="10" y1="170" x2="330" y2="170" stroke="#ff5e5e" strokeWidth="1" />
+              </svg>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="position-absolute bottom-0 start-50 translate-middle-x mb-4">
-        <div className="text-center">
-          <div className="text-white mb-2">
-            <i className="fas fa-chevron-down"></i>
-          </div>
-          <small className="text-white-50">Scroll untuk melihat lebih lanjut</small>
         </div>
       </div>
     </section>
