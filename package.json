@@ -1,0 +1,30 @@
+{
+  "name": "next-portofolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website built with Next.js and Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulul27/next-portofolio.git"
+  },
+  "keywords": ["portfolio", "nextjs", "bootstrap", "react"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulul27/next-portofolio/issues"
+  },
+  "homepage": "https://github.com/ulul27/next-portofolio#readme",
+  "dependencies": {
+    "next": "^15.3.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "bootstrap": "^5.3.7",
+    "@popperjs/core": "^2.11.8"
+  }
+}
