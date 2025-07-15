@@ -120,19 +120,19 @@ export default function Contact() {
     {
       icon: 'fas fa-envelope',
       title: 'Email',
-      value: 'hello@example.com',
-      link: 'mailto:hello@example.com'
+      value: 'ulfdh244@gmail.com',
+      link: 'mailto:ulfdh244@gmail.com'
     },
     {
       icon: 'fas fa-phone',
       title: 'Telepon',
-      value: '+62 812-3456-7890',
-      link: 'tel:+6281234567890'
+      value: '+62 857-4000-4600',
+      link: 'tel:+6285740004600'
     },
     {
       icon: 'fas fa-map-marker-alt',
       title: 'Lokasi',
-      value: 'Jakarta, Indonesia',
+      value: 'Kudus ,Jawa Tengah, Indonesia',
       link: '#'
     }
   ]
@@ -181,7 +181,7 @@ export default function Contact() {
               <div className="mt-4">
                 <h6 className="fw-bold mb-3">Ikuti Saya</h6>
                 <div className="d-flex gap-2">
-                  <a href="#" className="btn btn-outline-primary rounded-circle" style={{ width: '40px', height: '40px' }}>
+                  <a href="https://github.com/ulul27" target="_blank" className="btn btn-outline-primary rounded-circle" style={{ width: '40px', height: '40px' }}>
                     <i className="fab fa-github"></i>
                   </a>
                   <a href="#" className="btn btn-outline-primary rounded-circle" style={{ width: '40px', height: '40px' }}>
@@ -190,7 +190,7 @@ export default function Contact() {
                   <a href="#" className="btn btn-outline-primary rounded-circle" style={{ width: '40px', height: '40px' }}>
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#" className="btn btn-outline-primary rounded-circle" style={{ width: '40px', height: '40px' }}>
+                  <a href="https://www.instagram.com/ulul_mna/" target="_blank" className="btn btn-outline-primary rounded-circle" style={{ width: '40px', height: '40px' }}>
                     <i className="fab fa-instagram"></i>
                   </a>
                 </div>

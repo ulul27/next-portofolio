@@ -28,7 +28,7 @@ export default function About() {
   }, [])
 
   const skills = [
-    { name: 'React', level: 90, icon: 'fab fa-react' },
+    { name: 'React', level: 95, icon: 'fab fa-react' },
     { name: 'JavaScript', level: 95, icon: 'fab fa-js-square' },
     { name: 'Node.js', level: 85, icon: 'fab fa-node-js' },
     { name: 'HTML/CSS', level: 90, icon: 'fab fa-html5' },
@@ -74,7 +74,7 @@ export default function About() {
         </div>
 
         <div className="row align-items-center">
-          <div className="col-lg-6 mb-5 mb-lg-0">
+          <div className="col-lg-8 mb-5 mb-lg-0">
             <div className={`${isVisible ? 'fade-in-up' : ''}`}>
               <h3 className="fw-bold mb-4">Siapa Saya?</h3>
               <p className="mb-4">
@@ -105,7 +105,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-3">
             <div className={`${isVisible ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.2s' }}>
               <h3 className="fw-bold mb-4">Keahlian Teknis</h3>
               {skills.map((skill, index) => (
@@ -115,7 +115,7 @@ export default function About() {
                       <i className={`${skill.icon} me-2 text-primary`}></i>
                       <span className="fw-semibold">{skill.name}</span>
                     </div>
-                    <span className="text-muted">{skill.level}%</span>
+                    {/* <span className="text-muted">{skill.level}%</span> */}
                   </div>
                   <div className="progress" style={{ height: '8px' }}>
                     <div 

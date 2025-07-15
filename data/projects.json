@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "title": "E-Commerce Website",
-    "description": "Website toko online dengan fitur keranjang belanja, pembayaran, dan manajemen produk. Dibuat menggunakan React dan Node.js.",
+    "title": "To Do List",
+    "description": "Aplikasi Note atau Buku tulis dengan fitur Tambah catatan, Lihat catatan, Edit catatan, dan Hapus catatan. Dibuat menggunakan React dan Node.js.",
     "image": "/images/project1.jpg",
-    "technologies": ["React", "Node.js", "MongoDB", "Express"],
-    "github": "https://github.com/username/ecommerce",
-    "demo": "https://ecommerce-demo.com",
+    "technologies": ["Next.js", "Boostrap 5.0"],
+    "github": "https://github.com/ulul27/next-task-manager",
+    "demo": "https://next-task-manager-three.vercel.app/",
     "category": "Web Development"
   },
   {
     "id": 2,
-    "title": "Mobile App - Task Manager",
-    "description": "Aplikasi mobile untuk manajemen tugas dengan fitur reminder, kategori, dan sinkronisasi cloud. Dibuat menggunakan React Native.",
+    "title": "Website Software House",
+    "description": "Website Software House dengan fitur kontak, tentang kami, layanan, dan portofolio. Dibuat menggunakan React Native dan Bootsrap 5.0.",
     "image": "/images/project2.jpg",
-    "technologies": ["React Native", "Firebase", "Redux", "AsyncStorage"],
-    "github": "https://github.com/username/task-manager",
-    "demo": "https://task-manager-demo.com",
-    "category": "Mobile Development"
+    "technologies": ["React Native", "Boostrap 5.0"],
+    "github": "https://github.com/ulul27/masteringNextJs",
+    "demo": "https://mastering-next-js-seven.vercel.app/categories",
+    "category": "Web Development"
   },
   {
     "id": 3,
@@ -28,35 +28,5 @@
     "github": "https://github.com/username/analytics-dashboard",
     "demo": "https://analytics-demo.com",
     "category": "Data Visualization"
-  },
-  {
-    "id": 4,
-    "title": "Blog Platform",
-    "description": "Platform blog dengan sistem CMS, editor WYSIWYG, dan fitur komentar. Dibuat menggunakan Next.js dan Prisma.",
-    "image": "/images/project4.jpg",
-    "technologies": ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
-    "github": "https://github.com/username/blog-platform",
-    "demo": "https://blog-demo.com",
-    "category": "Web Development"
-  },
-  {
-    "id": 5,
-    "title": "Weather App",
-    "description": "Aplikasi cuaca dengan prediksi 7 hari, lokasi GPS, dan notifikasi cuaca ekstrem. Menggunakan OpenWeatherMap API.",
-    "image": "/images/project5.jpg",
-    "technologies": ["JavaScript", "HTML5", "CSS3", "OpenWeatherMap API"],
-    "github": "https://github.com/username/weather-app",
-    "demo": "https://weather-demo.com",
-    "category": "Web Development"
-  },
-  {
-    "id": 6,
-    "title": "Portfolio Website",
-    "description": "Website portfolio pribadi dengan desain responsif dan animasi smooth. Dibuat menggunakan Next.js dan Bootstrap.",
-    "image": "/images/project6.jpg",
-    "technologies": ["Next.js", "Bootstrap", "JavaScript", "CSS3"],
-    "github": "https://github.com/username/portfolio",
-    "demo": "https://portfolio-demo.com",
-    "category": "Web Development"
   }
 ] 

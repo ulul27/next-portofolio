@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 mb-4 mb-lg-0">
-            <h5 className="fw-bold mb-3">Portfolio</h5>
+            <h5 className="fw-bold mb-3">PORTOFOLIO</h5>
             <p className="text-muted">
               Saya adalah seorang Full Stack Developer yang passionate dalam menciptakan 
               aplikasi web dan mobile yang inovatif dan user-friendly.
