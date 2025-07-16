@@ -4,15 +4,6 @@ import { useState, useEffect } from 'react'
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-  const [errors, setErrors] = useState({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,86 +26,6 @@ export default function Contact() {
       }
     }
   }, [])
-
-  const validateForm = () => {
-    const newErrors = {}
-
-    // Name validation
-    if (!formData.name.trim()) {
-      newErrors.name = 'Nama harus diisi'
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Nama minimal 2 karakter'
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email harus diisi'
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Format email tidak valid'
-    }
-
-    // Subject validation
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subjek harus diisi'
-    } else if (formData.subject.trim().length < 5) {
-      newErrors.subject = 'Subjek minimal 5 karakter'
-    }
-
-    // Message validation
-    if (!formData.message.trim()) {
-      newErrors.message = 'Pesan harus diisi'
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Pesan minimal 10 karakter'
-    }
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-    
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }))
-    }
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    
-    if (!validateForm()) {
-      return
-    }
-
-    setIsSubmitting(true)
-    setSubmitStatus(null)
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      })
-    } catch (error) {
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   const contactInfo = [
     {
@@ -204,23 +115,19 @@ export default function Contact() {
               <div className="contact-form">
                 <h3 className="fw-bold mb-4">Kirim Pesan</h3>
                 
-                {submitStatus === 'success' && (
-                  <div className="alert alert-success alert-dismissible fade show" role="alert">
-                    <i className="fas fa-check-circle me-2"></i>
-                    Pesan Anda telah berhasil dikirim! Saya akan segera menghubungi Anda.
-                    <button type="button" className="btn-close" onClick={() => setSubmitStatus(null)}></button>
-                  </div>
-                )}
-
-                {submitStatus === 'error' && (
-                  <div className="alert alert-danger alert-dismissible fade show" role="alert">
-                    <i className="fas fa-exclamation-circle me-2"></i>
-                    Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.
-                    <button type="button" className="btn-close" onClick={() => setSubmitStatus(null)}></button>
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit}>
+                <form action="https://formsubmit.co/ulfdh244@gmail.com" method="POST">
+                  {/* Honeypot untuk mencegah spam */}
+                  <input type="text" name="_honey" style={{ display: 'none' }} />
+                  
+                  {/* Disable captcha */}
+                  <input type="hidden" name="_captcha" value="false" />
+                  
+                  {/* Redirect setelah submit */}
+                  <input type="hidden" name="_next" value="https://your-domain.com/thank-you" />
+                  
+                  {/* Template email */}
+                  <input type="hidden" name="_template" value="table" />
+                  
                   <div className="row">
                     <div className="col-md-6 mb-3">
                       <label htmlFor="name" className="form-label fw-semibold">
@@ -228,16 +135,12 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
-                        className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                        className="form-control"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        required
                         placeholder="Masukkan nama lengkap"
                       />
-                      {errors.name && (
-                        <div className="invalid-feedback">{errors.name}</div>
-                      )}
                     </div>
                     
                     <div className="col-md-6 mb-3">
@@ -246,16 +149,12 @@ export default function Contact() {
                       </label>
                       <input
                         type="email"
-                        className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                        className="form-control"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+                        required
                         placeholder="Masukkan email"
                       />
-                      {errors.email && (
-                        <div className="invalid-feedback">{errors.email}</div>
-                      )}
                     </div>
                   </div>
 
@@ -265,16 +164,12 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
-                      className={`form-control ${errors.subject ? 'is-invalid' : ''}`}
+                      className="form-control"
                       id="subject"
                       name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
+                      required
                       placeholder="Masukkan subjek pesan"
                     />
-                    {errors.subject && (
-                      <div className="invalid-feedback">{errors.subject}</div>
-                    )}
                   </div>
 
                   <div className="mb-4">
@@ -282,35 +177,21 @@ export default function Contact() {
                       Pesan <span className="text-danger">*</span>
                     </label>
                     <textarea
-                      className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+                      className="form-control"
                       id="message"
                       name="message"
                       rows="5"
-                      value={formData.message}
-                      onChange={handleInputChange}
+                      required
                       placeholder="Tulis pesan Anda di sini..."
                     ></textarea>
-                    {errors.message && (
-                      <div className="invalid-feedback">{errors.message}</div>
-                    )}
                   </div>
 
                   <button
                     type="submit"
                     className="btn btn-primary btn-lg btn-custom w-100"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      <>
-                        <span className="spinner-border spinner-border-sm me-2" role="status"></span>
-                        Mengirim...
-                      </>
-                    ) : (
-                      <>
-                        <i className="fas fa-paper-plane me-2"></i>
-                        Kirim Pesan
-                      </>
-                    )}
+                    <i className="fas fa-paper-plane me-2"></i>
+                    Kirim Pesan
                   </button>
                 </form>
               </div>

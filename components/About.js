@@ -30,32 +30,17 @@ export default function About() {
   const skills = [
     { name: 'React', level: 95, icon: 'fab fa-react' },
     { name: 'JavaScript', level: 95, icon: 'fab fa-js-square' },
-    { name: 'Node.js', level: 85, icon: 'fab fa-node-js' },
+    { name: 'Next.js', level: 85, icon: 'fab fa-node-js' },
     { name: 'HTML/CSS', level: 90, icon: 'fab fa-html5' },
-    { name: 'Python', level: 80, icon: 'fab fa-python' },
-    { name: 'MongoDB', level: 75, icon: 'fas fa-database' },
-    { name: 'Git', level: 85, icon: 'fab fa-git-alt' },
-    { name: 'Docker', level: 70, icon: 'fab fa-docker' }
+    { name: 'Git', level: 85, icon: 'fab fa-git-alt' }
   ]
 
   const experiences = [
     {
-      year: '2023 - Sekarang',
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      description: 'Mengembangkan aplikasi web dan mobile dengan React, Node.js, dan React Native.'
-    },
-    {
-      year: '2021 - 2023',
+      year: '2025',
       title: 'Frontend Developer',
-      company: 'Digital Agency XYZ',
-      description: 'Membuat UI/UX yang responsif dan interaktif menggunakan React dan Vue.js.'
-    },
-    {
-      year: '2019 - 2021',
-      title: 'Junior Developer',
-      company: 'Startup ABC',
-      description: 'Belajar dan mengembangkan aplikasi web menggunakan JavaScript dan PHP.'
+      company: 'RWID',
+      description: 'Membuat Website yang responsif dan interaktif menggunakan React.js.'
     }
   ]
 
@@ -78,8 +63,7 @@ export default function About() {
             <div className={`${isVisible ? 'fade-in-up' : ''}`}>
               <h3 className="fw-bold mb-4">Siapa Saya?</h3>
               <p className="mb-4">
-                Saya adalah seorang Full Stack Developer dengan pengalaman lebih dari 5 tahun dalam 
-                pengembangan aplikasi web dan mobile. Saya memiliki passion yang kuat dalam menciptakan 
+                Saya adalah seorang Full Stack Developer pengembang aplikasi web. Saya memiliki passion yang kuat dalam menciptakan 
                 solusi digital yang tidak hanya fungsional tetapi juga memberikan pengalaman pengguna yang luar biasa.
               </p>
               <p className="mb-4">
@@ -91,14 +75,7 @@ export default function About() {
                   <div className="text-center p-3">
                     <i className="fas fa-code text-primary mb-2" style={{ fontSize: '2rem' }}></i>
                     <h5 className="fw-bold">Web Development</h5>
-                    <small className="text-muted">React, Node.js, Express</small>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="text-center p-3">
-                    <i className="fas fa-mobile-alt text-success mb-2" style={{ fontSize: '2rem' }}></i>
-                    <h5 className="fw-bold">Mobile Development</h5>
-                    <small className="text-muted">React Native, Flutter</small>
+                    <small className="text-muted">React, Node.js, Next</small>
                   </div>
                 </div>
               </div>

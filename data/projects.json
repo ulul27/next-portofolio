@@ -18,15 +18,5 @@
     "github": "https://github.com/ulul27/masteringNextJs",
     "demo": "https://mastering-next-js-seven.vercel.app/categories",
     "category": "Web Development"
-  },
-  {
-    "id": 3,
-    "title": "Dashboard Analytics",
-    "description": "Dashboard untuk visualisasi data dengan grafik interaktif dan laporan real-time. Menggunakan Chart.js dan D3.js.",
-    "image": "/images/project3.jpg",
-    "technologies": ["Vue.js", "Chart.js", "D3.js", "Laravel"],
-    "github": "https://github.com/username/analytics-dashboard",
-    "demo": "https://analytics-demo.com",
-    "category": "Data Visualization"
   }
 ] 

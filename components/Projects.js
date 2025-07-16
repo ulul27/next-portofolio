@@ -30,7 +30,7 @@ export default function Projects() {
     }
   }, [])
 
-  const categories = ['all', 'Web Development', 'Mobile Development', 'Data Visualization']
+  const categories = ['all', 'Web Development']
 
   const filteredProjects = filter === 'all' 
     ? projects 

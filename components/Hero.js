@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="col-lg-6">
             <div className={`${isVisible ? 'fade-in-up' : ''}`}>
               <h1 className="display-4 fw-bold mb-4">
-                Halo, Saya <span className="text-warning">Developer</span>
+                Halo, Saya <span className="text-warning">Ulul Fadhli</span>
               </h1>
               <p className="lead mb-4">
                 Saya adalah seorang Full Stack Developer yang passionate dalam menciptakan 
