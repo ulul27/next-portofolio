@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/ulul27/next-portofolio.git"
   },
-  "keywords": ["portfolio", "nextjs", "bootstrap", "react"],
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "bootstrap",
+    "react"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -21,10 +26,11 @@
   },
   "homepage": "https://github.com/ulul27/next-portofolio#readme",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.11.0",
+    "bootstrap": "^5.3.7",
     "next": "^15.3.5",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "bootstrap": "^5.3.7",
-    "@popperjs/core": "^2.11.8"
+    "react-dom": "^19.1.0"
   }
 }
