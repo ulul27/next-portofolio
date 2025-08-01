@@ -6,7 +6,7 @@ import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import { useEffect } from 'react'
-import { googleSheets } from '../lib/googleSheets.js/googleSheets'
+import { googleSheets } from '../lib/googleSheets'
 
 export default function Home() {
   useEffect(() => {
