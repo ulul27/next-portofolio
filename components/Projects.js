@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import projectsData from '../data/projects.json'
+import { googleSheets } from '../lib/googleSheets'
 
 export default function Projects() {
   const [projects, setProjects] = useState(projectsData)
@@ -9,6 +10,18 @@ export default function Projects() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    async function fetchData() {
+      try {
+        // Jika Anda ingin menggunakan Google Sheets, uncomment baris di bawah
+        const data = await googleSheets();
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    
+    fetchData();
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

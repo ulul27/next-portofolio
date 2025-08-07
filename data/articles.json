@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Memulai Karir sebagai Web Developer",
+    "description": "Panduan lengkap untuk memulai karir di bidang web development, dari dasar-dasar HTML/CSS hingga framework modern seperti React dan Next.js.",
+    "image": "/images/article1.jpg",
+    "medium": "https://medium.com/@ulul27/memulai-karir-web-developer",
+    "readTime": "8 min read"
+  },
+  {
+    "id": 2,
+    "title": "Optimasi Performa Website dengan Next.js",
+    "description": "Teknik-teknik optimasi performa website menggunakan Next.js, termasuk lazy loading, image optimization, dan code splitting.",
+    "image": "/images/article2.jpg",
+    "medium": "https://medium.com/@ulul27/optimasi-performa-nextjs",
+    "readTime": "12 min read"
+  },
+  {
+    "id": 3,
+    "title": "Best Practices React Development",
+    "description": "Kumpulan best practices dalam pengembangan aplikasi React, termasuk state management, component structure, dan testing.",
+    "image": "/images/article3.jpg",
+    "medium": "https://medium.com/@ulul27/react-best-practices",
+    "readTime": "15 min read"
+  }
+] 
